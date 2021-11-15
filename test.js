@@ -110,7 +110,7 @@ describe('pre-commit', function () {
       };
 
       hook.parse();
-      assume(hook.config.run).deep.equals(['test']);
+      assume(hook.config.run).deep.equals(["'test'"]);
     });
 
     it('ignores the default npm.script.test placeholder', function () {
